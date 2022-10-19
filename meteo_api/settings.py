@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'A_Propos',
     'meteoapp',
     'django.contrib.admin',
     'django.contrib.auth',

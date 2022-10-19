@@ -6,7 +6,7 @@ api_key = "12e30bac05ff8b5c1f2adf2be1c7be2b"
 city =input("Entrer votre ville.")
 units = "metric"
 lang="fr"
-url = base_url + "appid=" + api_key + "&q=" + city + "&units=" + units
+url = base_url + "&lang=" + lang + "appid=" + api_key + "&q=" + city + "&units=" + units
 
 
 response=requests.get(url).json()
@@ -18,12 +18,12 @@ wind0=response["list"][0]["wind"]["speed"]
 description0=response["list"][0]["weather"][0]["description"]
 
 
-
 temp10=response["list"][10]["main"]["temp"]
 ressentie10=response["list"][10]["main"]["feels_like"]
 dt10=response["list"][10]["dt_txt"]
 wind10=response["list"][10]["wind"]["speed"]
 description10=response["list"][10]["weather"][0]["description"]
+
 
 temp15=response["list"][15]["main"]["temp"]
 ressentie15=response["list"][15]["main"]["feels_like"]
@@ -31,17 +31,20 @@ dt15=response["list"][15]["dt_txt"]
 wind15=response["list"][15]["wind"]["speed"]
 description15=response["list"][15]["weather"][0]["description"]
 
+
 temp20=response["list"][20]["main"]["temp"]
 ressentie20=response["list"][20]["main"]["feels_like"]
 dt20=response["list"][20]["dt_txt"]
 wind20=response["list"][20]["wind"]["speed"]
 description20=response["list"][20]["weather"][0]["description"]
 
+
 temp30=response["list"][30]["main"]["temp"]
 ressentie30=response["list"][30]["main"]["feels_like"]
 dt30=response["list"][30]["dt_txt"]
 wind30=response["list"][30]["wind"]["speed"]
 description30=response["list"][30]["weather"][0]["description"]
+
 
 temp39=response["list"][39]["main"]["temp"]
 ressentie39=response["list"][39]["main"]["feels_like"]
