@@ -1,3 +1,4 @@
+{%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,11 @@
     <title>Document</title>
 </head>
 <body>
-    {% block banner %}{% endblock  banner%}
+    {% include "includes/header.html" %}
+    {% block banner %}
+    
+    <h1>TEST LINK</h1>
+    {% endblock  banner%}
   
 </body>
 </html>

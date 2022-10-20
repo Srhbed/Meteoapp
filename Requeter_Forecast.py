@@ -6,7 +6,7 @@ api_key = "12e30bac05ff8b5c1f2adf2be1c7be2b"
 city =input("Entrer votre ville.")
 units = "metric"
 lang="fr"
-url = base_url + "&lang=" + lang + "appid=" + api_key + "&q=" + city + "&units=" + units
+url = base_url + "appid=" + api_key + "&q=" + city + "&units=" + units
 
 
 response=requests.get(url).json()
