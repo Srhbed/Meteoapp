@@ -1,51 +1,69 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather</title>
-    {% comment %} <link rel="stylesheet" href="{% static'style.css' %}" /> {% endcomment %}
-    <img src="{% static 'static/images/image.jpg' %}" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
-  
-    
-</head>
-<body>  
-{% comment %} <form method="POST">
-    {% csrf_token %}
 
-    <input type="text" placeholder="city name" name='city' />
-    <button type='submit'>entrer</button>
-</form>
+{% block banner %}   
+<nav>
+    <div class="px-3 py-2 text-bg-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
 
-    </h1>{{description}}</14>
-    <h1>{{temp}}</h1>
-    <h1>{{day}}</h1> 
-    <h1>{{city}}</h1>
-    <img src="http://openweathermap.org/img/w/{{icon}}.png" width='100px'>  {% endcomment %}
-   
-
-<section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-secondary">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+                <strong class="ab">Home </strong>
+              
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
+               <strong class="ab">A propos</strong> 
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+                <strong class="ab">Connexion</strong>
+                
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+                <strong class="ab">S'inscrire</strong>
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        </div>
+      </div>
+    </div>
+  </nav>
+                <h1 class="title1">
                     What's the weather like?
                 </h1>
-            </div>
-        </div>
-    </section>
+                <h2>
+                    En octobre,  Qui n'a pas de manteau , Doit en trouver un bientôt &#9787;
+                </h2>
+      
     <section class="section">
         <div class="container">
             <div class="columns">
                 <div class="column is-offset-4 is-4">
                     <form method="POST">
                         {% csrf_token %}  
-                                <input class="control is-expanded" type="text" placeholder="city name" name='city' />
-
-                                <button type='submit'>Add City</button>
-                            
+                                <input class='searchbar' type="text" placeholder="city name" name='city' />
+                                <button type="button" class="btn btn-dark">Add City</button>
+                                {% comment %} <button class ="control" type='submit' width >Add City</button>                        {% endcomment %}
                     </form>
                 </div>
             </div>
@@ -59,13 +77,12 @@
                     <div class="box">
                         <article class="media">
                             <div class="media-left">
-                             
                             </div>
                             <div class="media-content">
                                 <div class="content">
                                     <p>
-                                    </h1 class="title" >{{city}}</h1>
-                                    <h1>{{temp}}</h1>
+                                    <h1 class="title" >{{city}}</h1>
+                                    <h1>{{temp}}°C</h1>
                                     <h1>{{day}}</h1> 
                                     <h1>{{description}}</h1>
                                     <img src="http://openweathermap.org/img/w/{{icon}}.png" width='100px'>
@@ -79,8 +96,15 @@
             </div>
         </div>
     </section> 
-  <footer class="footer">
-  </footer> 
-</body>
-</html>
+    <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+    </footer>
+
+  {% endblock banner%}
+
+ 
+
 

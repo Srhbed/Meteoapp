@@ -1,0 +1,63 @@
+body{
+ background-image: url(../images/pexels-pixabay-235721.jpg);
+ 
+
+ }
+.title1{
+    font-family:inherit bold;
+    font-size: 50px bold;
+    font-language-override: initial;
+  
+  
+
+    color:white;
+    display: flex;
+    justify-content:space-around;
+    background-color: rgba(212, 81, 20, 0.747);
+
+    
+}
+.searchbar{
+    border-radius: 8px;
+    border: 10px;
+    color: black;
+    size:20px;
+
+
+}
+.ab{
+    font-size: 25px;
+    color: white;
+
+}
+.px-3{
+opacity: 90%;
+}
+.box{
+    font-weight:10;
+   margin-left: -10%;
+   box-shadow: 20px 0px 30px black, -20px  0px 30px black;
+   border-radius: 5%;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin-top: -5%;
+   background-color: rgba(255, 255, 255, 0.849);
+
+}
+h2{
+color:white;
+display: flex;
+justify-content:space-around;
+background-color: rgba(112, 47, 17, 0.548);
+
+
+
+
+}
+.section{
+    display: block;
+   
+    justify-content: space-between;
+}
+
+
+
