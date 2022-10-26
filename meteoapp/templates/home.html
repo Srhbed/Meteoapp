@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block banner %}   
 <nav>
     <div class="px-3 py-2 text-bg-dark">
@@ -14,14 +15,14 @@
             <li>
               <a href="#" class="nav-link text-secondary">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
-                <strong class="ab">Home </strong>
+                {% comment %} <strong class="ab">Home </strong> {% endcomment %}
               
               </a>
             </li>
             <li>
               <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
-               <strong class="ab">A propos</strong> 
+                <svg class="bi d-block mx-auto mb-0" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
+               <strong class="ab"><a id="link" href="./apropos/">A propos </a></strong> 
               </a>
             </li>
             <li>
@@ -51,9 +52,10 @@
                 <h1 class="title1">
                     What's the weather like?
                 </h1>
-                <h2>
+                
+                {% comment %} <h2>
                     En octobre,  Qui n'a pas de manteau , Doit en trouver un bientôt &#9787;
-                </h2>
+                </h2> {% endcomment %}
       
     <section class="section">
         <div class="container">
@@ -74,26 +76,31 @@
             <div class="rows">
                 <div class="column is-offset-4 is-4">
                   
-                    <div class="box">
+                    <div class="box" ><a href="./previsions/"></a>
                         <article class="media">
                             <div class="media-left">
                             </div>
                             <div class="media-content">
                                 <div class="content">
+                                  
                                     <p>
-                                    <h1 class="title" >{{city}}</h1>
-                                    <h1>{{temp}}°C</h1>
-                                    <h1>{{day}}</h1> 
-                                    <h1>{{description}}</h1>
-                                    <img src="http://openweathermap.org/img/w/{{icon}}.png" width='100px'>
+                                    <h1 class="title" id='city' >{{city}}</h1>
+                                    <img id= 'icon' src="http://openweathermap.org/img/w/{{icon}}.png" width='150px'>
+                                    <h1 id="temps">{{temp}}°C</h1>
+                                    <h1 id="desc">{{description}}</h1>
+                                    <h1 id="jour">{{day}}</h1> 
+                                    
                                     </p>
                                 </div>
                             </div>
                         </article>
                     </div>
-                   
                 </div>
             </div>
+        </div><br><br>
+        <div>
+          <a id="link1" class="clignote" href="./previsions"> Veuillez cliquer ici pour voir les prévisions des 5 prochains jours  </a>
+
         </div>
     </section> 
     <footer>

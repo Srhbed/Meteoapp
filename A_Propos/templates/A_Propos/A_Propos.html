@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>météo</title>
+    {% comment %} <link rel="stylesheet" href={% static "css/style.css"%}> {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+{% block banner %}
+<nav>
+  <div class="px-3 py-2 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a href="#" class="nav-link text-secondary">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+              <strong class="ab" ><a href=''> Home </a>
+               </strong>
+            
+            
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-0" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
+             {% comment %} <strong class="ab"><a id="link" href="./apropos/">A propos </a></strong>  {% endcomment %}
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+              {% comment %} <strong class="ab">Connexion</strong> {% endcomment %}
+              
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+              {% comment %} <strong class="ab">S'inscrire</strong> {% endcomment %}
+              
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="px-3 py-2 border-bottom mb-3">
+    <div class="container d-flex flex-wrap justify-content-center">
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">A propos de MeteoApp.</h1>
+        <p class="lead">Le projet MeteoApp est née dans le cadre du SAS Formation IA.
+            MeteoApp est un site qui peut permet de requêter API a OpenWeather API.
+            Notre app vous propose la possibilité de consulter la météo immédiate dans la ville de votre
+            choix ainsi que de consulter les prévisions futures sur 5 jours.
+            </p>
+        <p class="lead">
+            L'API OPenWeather permet d'acceder aux données meteo
+            de plus de 200.000 villes. Elle collecte et traite les données météo
+            de différentes sources tels que des modèles globaux et locaux, des satellites, radars
+            et d'un réseau étendu de stations météorologiques.
+        </p>
+      </main>
+    </div>
+    {% endblock banner %}
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
