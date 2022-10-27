@@ -34,8 +34,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'previsions',
     'meteoapp',
-    'A_Propos',
     'register',
+    'crispy_forms',
+    'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,3 +133,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGIN_URL = '/'
+
+

@@ -16,20 +16,20 @@
             <li>
               <a href="#" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
-               <strong class="ab"><a id="link" href="./apropos/">A propos </a></strong> 
+               <strong class="ab"><a id="link" href="{% url 'about' %}">A propos </a></strong> 
               </a>
             </li>
             <li>
               <a href="#" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
-                <strong class="ab"><a id="link" href="./register/">Connexion</strong>
+                <strong class="ab"><a id="link" href="{% url 'login' %}">Connexion</strong>
                 
               </a>
             </li>
             <li>
               <a href="#" class="nav-link text-white">
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
-                <strong class="ab"><a id="link" href="./register/"> S'inscrire</a></strong>
+                <strong class="ab"><a id="link" href="{% url 'signup' %}"> S'inscrire</a></strong>
                 
               </a>
             </li>
