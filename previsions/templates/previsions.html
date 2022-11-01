@@ -1,148 +1,105 @@
-{% comment %} {% extends 'base.html' %} {% endcomment %}
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>météo</title>
-    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" /> {% endcomment %}
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> {% endcomment %}
-
-    <link rel="stylesheet" href={% static "css/style2.css"%}>
-    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> {% endcomment %}
-<!-- CSS only -->
-<!-- CSS only -->
-
+{% extends 'base.html' %}
 
 
     
-<body>
     {% block banner %}
-
-
-    <header>
-     
-    </header>
-    <main> 
-        
-        <h1 class="title">{{city}}</h1>
-        
+<section>
+    <main class='container'> 
+        <br><br>
+            <h1 class="title">{{city}}</h1>
+            
         <section class="carousel">
-            <ul class="carousel-items">
-                <li class="carousel-item">
-                    <div class="card">
-                                            <div class="box"  >
-                                                    <div class="mabox">
-                                                        
-                                                                                    <p>
-                                                                                        {% comment %} <h1 class="title" >{{city}}</h1> {% endcomment %}
-                                                                                        <img src="http://openweathermap.org/img/w/{{icon0}}.png" width='100px'>
-                                                                                        <h1>{{temp0}}°C</h1>
-                                                                                        <h1>{{wind0}}km/h</h1>
-                                                                                        <h1>{{description0}}</h1>
-                                                                                                                                                                                <h1>{{dt0}}</h1>
+        <ul class="carousel-items">
+                    <li class="carousel-item1">
+                        <div class="card1">
+                                                <div class="box"  >
 
-                                                                                    </p><br>
-                                                    </div>                 
-                                            </div>   
-                </div>
-            </li>                          
-            <li class="carousel-item">
-                <div class="card">
-                                            <div class="box">   
-                                                    <div class="mabox">
-                                                                                    <p>
-                                                                                        <img src="http://openweathermap.org/img/w/{{icon10}}.png" width='100px'>
-                                                                                        <h1>{{temp10}}°C</h1>
-                                                                                        <h1>{{wind10}}km/h</h1>
-                                                                                        <h1>{{description10}}</h1>
-                                                                                        <h1>{{dt10}}</h1>
+                                                                        <p>
+                                                                        <img src="http://openweathermap.org/img/w/{{icon0}}.png" width='50px'>
+                                                                            <h2>{{temp0}}°C</h2>
+                                                                            <h2>{{wind0}}km/h</h2>
+                                                                            <h2>{{description0}}</h2>
+                                                                            <h2>{{dt0}}</h2>
 
-                                                                                    </p><br>
-                                                    </div>  
-                                            </div> 
-                    </div>
-            </li> 
-            <li class="carousel-item">
-                <div class="card">
-                                            <div class="box">   
-                                                <div class="mabox">
-                                                                            <p>
-                                                                                <img id= 'icon3' src="http://openweathermap.org/img/w/{{icon15}}.png" width='100px'>
-                                                                                <h1>{{temp15}}°C</h1>
-                                                                                <h1>{{wind15}}km/h</h1>
-                                                                                <h1>{{description15}}</h1>
-                                                                                <h1>{{dt15}}</h1><br>
-
-                                                                            </p>
-                                                </div>    
-                                            </div>  
-                                        </div> 
-                    </div>
-            </li> 
-            <li class="carousel-item">
-                <div class="card">     
-                                            <div class="box">   
-                                                    <div class="mabox">
-                                                                                    <p>
-                                                                                        <img  src="http://openweathermap.org/img/w/{{icon20}}.png" width='100px'>
-                                                                                        <h1 >{{temp20}}°C</h1>
-                                                                                        <h1 >{{wind20}}km/h</h1>
-                                                                                        <h1 >{{description20}}</h1>
-                                                                                        <h1 >{{dt20}}</h1>
-
-                                                                                    </p><br>
-                                                    </div>    
-                                            </div>
-                </div>
-            </li>
-            <li class="carousel-item">
-                <div class="card">    
-                                            <div class="box">
-                                                    <div class="mabox">
-
-                                                                                    <p>
-                                                                                        <img id= 'icon' src="http://openweathermap.org/img/w/{{icon30}}.png" width='100px'>
-                                                                                        <h1>{{temp30}}°C</h1>
-                                                                                        <h1>{{wind30}}km/h</h1>
-                                                                                        <h1>{{description30}}</h1>
-                                                                                        <h1>{{dt30}}</h1>
-
-                                                                                    </p><br>
-                                                    </div>    
-                                            </div> 
-                    </div>
-                </li>   
-                <li class="carousel-item">
-                    <div class="card">                          
-                                            <div class="box">      
-                                                    <div class="mabox">      
-                                                                                    <p>    
-                                                                                        <img src="http://openweathermap.org/img/w/{{icon39}}.png" width='100px'>
-                                                                                        <h1>{{temp39}}°C</h1>
-                                                                                        <h1>{{wind39}}km/h</h1>
-                                                                                        <h1>{{description39}}</h1>
-                                                                                        <h1>{{dt39}}</h1>
-<br>
-                                                                                    </p>
-                                                    </div>    
-                                            </div> 
+                                                                        </p>
+                                                </div>   
                         </div>
+                </li>                          
+                <li class="carousel-item1">
+                    <div class="card1">
+                                                <div class="box">   
+                                                                        <p>
+                                                                            <img src="http://openweathermap.org/img/w/{{icon10}}.png" width='50px'>
+                                                                            <h2>{{temp10}}°C</h2>
+                                                                            <h2>{{wind10}}km/h</h2>
+                                                                            <h2>{{description10}}</h2>
+                                                                            <h2>{{dt10}}</h2>
+
+                                                                        </p>
+                                                </div> 
+                        
+                </li> 
+                <li class="carousel-item1">
+                    <div class="card1">
+                                                <div class="box">   
+                                                                    <p>
+                                                                        <img  src="http://openweathermap.org/img/w/{{icon15}}.png" width='50px'>
+                                                                        <h2>{{temp15}}°C</h2>
+                                                                        <h2>{{wind15}}km/h</h2>
+                                                                        <h2>{{description15}}</h2>
+                                                                        <h2>{{dt15}}</h2>
+                                                                    </p>
+                                                </div>  
+                                            
+                    </div>
+                </li> 
+                <li class="carousel-item1">
+                    <div class="card1">     
+                                                <div class="box">   
+                                                                    <p>
+                                                                            <img  src="http://openweathermap.org/img/w/{{icon20}}.png" width='50px'>
+                                                                            <h2 >{{temp20}}°C</h2>
+                                                                            <h2 >{{wind20}}km/h</h2>
+                                                                            <h2 >{{description20}}</h2>
+                                                                            <h2 >{{dt20}}</h2>
+
+                                                                    </p>
+                                                </div>
+                    </div>
+                </li>
+                <li class="carousel-item1">
+                    <div class="card1">    
+                                                <div class="box">
+
+                                                                    <p>
+                                                                        <img  src="http://openweathermap.org/img/w/{{icon30}}.png" width='50px'>
+                                                                        <h2>{{temp30}}°C</h2>
+                                                                        <h2>{{wind30}}km/h</h2>
+                                                                        <h2>{{description30}}</h2>
+                                                                        <h2>{{dt30}}</h2>
+
+                                                                    </p>
+                                                </div> 
+                        </div>
+                </li>   
+                <li class="carousel-item1">
+                        <div class="card1">                          
+                                                <div class="box">      
+                                                                    <p>    
+                                                                        <img src="http://openweathermap.org/img/w/{{icon39}}.png" width='50px'>
+                                                                        <h2>{{temp39}}°C</h2>
+                                                                        <h2>{{wind39}}km/h</h2>
+                                                                        <h2>{{description39}}</h2>
+                                                                        <h2>{{dt39}}</h2>
+                                                                    </p>
+                                                </div> 
+                            </div>
                 </li>  
-            </ul>    
-        </section>            
-        <footer>
-        <br>
-        <br>
-        <br>
-        <br>
-        </footer>
-  </main>
+    </ul>    
+        <br><br><br><br><br>
+    </main>
+</section>   
   {% endblock banner %}
 
-</body>
 
-{% comment %} {% endblock banner %} {% endcomment %}
 

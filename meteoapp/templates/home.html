@@ -3,74 +3,33 @@
 
 
 {% block banner %}   
-<nav>
-    <div class="px-3 py-2 text-bg-dark">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-          </a>
 
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
-               <strong class="ab"><a id="link" href="{% url 'about' %}">A propos </a></strong> 
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
-                <strong class="ab"><a id="link" href="{% url 'login' %}">Connexion</strong>
-                
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
-                <strong class="ab"><a id="link" href="{% url 'signup' %}"> S'inscrire</a></strong>
-                
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap justify-content-center">
-        </div>
-      </div>
-    </div>
-  </nav>
                 <h1 class="title1">
-                    What's the weather like?
-                </h1>
-                
-                {% comment %} <h2>
-                    En octobre,  Qui n'a pas de manteau , Doit en trouver un bientôt &#9787;
-                </h2> {% endcomment %}
+                   Quel Temps Fait-il Aujourd'hui ?
+                </h1>       
       
-    <section class="section">
+    <section >
         <div class="container">
             <div class="columns">
-                <div class="column is-offset-4 is-4">
+                <span class="column is-offset-4 is-4">
                     <form method="POST">
                         {% csrf_token %}  
-                                <input class='searchbar' type="text" placeholder="city name" name='city' />
-                                <button type="button" class="btn btn-dark">Add City</button>
-                                {% comment %} <button class ="control" type='submit' width >Add City</button>                        {% endcomment %}
+                        {% comment %} {{form.name}} {% endcomment %}
+                        {% comment %} <button id='searchbar' class ="btn btn-dark" type='submit' width >le nom de ville </button>   {% endcomment %}
+                        <input id='searchbar' class='navbar navbar-light bg-light' type="text" placeholder="city name" name='city' />
+
                     </form>
-                </div>
+                </span>
             </div>
         </div>
    </section>
+   
     <section class="section">
         <div class="container">
             <div class="rows">
                 <div class="column is-offset-4 is-4">
                   
-                    <div class="box" ><a href="./previsions/"></a>
+                    <div class="box1" ><a href="./previsions/"></a>
                         <article class="media">
                             <div class="media-left">
                             </div>
@@ -78,7 +37,7 @@
                                 <div class="content">
                                   
                                     <p>
-                                    <h1 class="title" id='city' >{{city}}</h1>
+                                    <h1  id='city' >{{city}}</h1>
                                     <img id= 'icon' src="http://openweathermap.org/img/w/{{icon}}.png" width='150px'>
                                     <h1 id="temps">{{temp}}°C</h1>
                                     <h1 id="desc">{{description}}</h1>
@@ -93,16 +52,16 @@
             </div>
         </div><br><br>
         <div>
-          <a id="link1" class="clignote" href="./previsions"> Veuillez cliquer ici pour voir les prévisions des 5 prochains jours  </a>
+          <a id="link1" class="clignote" href="{% url 'previsions' %}"> Veuillez cliquer ici pour voir les prévisions des 5 prochains jours  </a>
 
         </div>
     </section> 
-    <footer>
+ 
         <br>
         <br>
         <br>
         <br>
-    </footer>
+    
 
   {% endblock banner%}
 

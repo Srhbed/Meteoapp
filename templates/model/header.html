@@ -1,0 +1,53 @@
+<nav>
+    <div class="px-3 py-2 text-bg-dark">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-1 text-small">
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
+               <strong class="ab"><a id="link" href="{% url 'home' %}">home </a></strong> 
+              </a>
+            </li>
+
+
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
+               <strong class="ab"><a id="link" href="{% url 'about' %}">A propos </a></strong> 
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+                <strong class="ab"><a id="link" href="{% url 'login' %}">Connexion</strong>
+                
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+                <strong class="ab"><a id="link" href="{% url 'signup' %}"> S'inscrire</a></strong>
+                
+              </a>
+            </li>
+            {% if user.is_authenticated %}
+            <span class="navbar-text"> Logged as : {{user.get_username}}</span>
+            <a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}?next={{request.path}}">log out</a>
+            {% else %}
+            <span class='navbar-text'>You are not logged</span>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,19 +1,26 @@
 from datetime import datetime
 from django.shortcuts import render
 import requests
+from django.contrib.auth.decorators import login_required
+
+from meteoapp.views import SECRET_KEY
 
 
 
+
+
+
+
+@login_required
 def previsions(request):
     
-   
+    
     city =request.session['city']
 
     URL="http://api.openweathermap.org/data/2.5/forecast?"
-    api_key = "12e30bac05ff8b5c1f2adf2be1c7be2b"
-
+    api_key : SECRET_KEY
  
-    NEWPARAMS ={'appid': api_key , 'q':city , 'units':'metric'}
+    NEWPARAMS ={'appid': SECRET_KEY , 'q':city , 'units':'metric'}
 
     
     previsions_meteo=requests.get(url=URL,params=NEWPARAMS)

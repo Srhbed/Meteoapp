@@ -3,6 +3,10 @@ body{
  
 
  }
+ footer{
+    background-color: black;
+color: white; 
+text-align: center;}
 .title1{
     font-family:inherit bold;
     font-size: 50px bold;
@@ -14,38 +18,49 @@ body{
 
     
 }
-.searchbar{
+#searchbar{
     border-radius: 8px;
-    border: 10px;
-    color: black;
-    size:20px;
+    border: 1.5px solid ;
+    color: rgba(88, 82, 82, 0.918);
+    /* size:20px; */
+    /* padding:0.5%; */
+    margin-top: 10%;
+    margin-left: 38%;
+    /* margin-right: 20%; */
 
 
 }
 .ab{
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 
 }
+
+
+
 .px-3{
-opacity: 90%;
+opacity: 95%;
 }
-.box{
+.box1{
     
+  
    font-weight:10;
-   margin-left: -10%;
    box-shadow: 20px 0px 30px black, -20px  0px 30px black;
-   border-radius: 5%;
    font-family:inherit bold;
-   margin-top: -18%;
-   background-color: rgba(255, 255, 255, 0.801);
+   margin-top: 4%;
+   margin-right: 28%;
+   margin-left:28%;
+   padding:2%;
+   background-color:rgba(255, 255, 255, 0.521);
+   border-radius: 5%;
 
 }
 h2{
-color:white;
 display: flex;
 justify-content:space-around;
-background-color: rgba(112, 47, 17, 0.548);
+font-size: 5px;
+color:rgb(90, 48, 48);
+
 }
 #link{
     
@@ -75,9 +90,10 @@ background-color: rgba(112, 47, 17, 0.548);
 #city{
    
     color:rgb(82, 48, 48);
+
    
 
-    margin-left: 5px;
+  
 }
 #temps{
     color:rgb(82, 48, 48);
@@ -92,7 +108,64 @@ background-color: rgba(112, 47, 17, 0.548);
 #icon{
     display: flex;
     float: right;
-     margin-top: -90px;
-     margin-right: 40px;
+     margin-top: -50px;
+     margin-right: 30px;
 
 }
+#aboute{
+ color:black;
+ background-color: rgba(255, 154, 108, 0.76);
+ margin-top: 5%;
+ 
+    
+}
+
+ .section{
+    display:flow-root;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 250px 10em;
+ }   
+.box{
+    background-color:rgba(255, 255, 255, 0.774);
+    border: solid rgba(7, 4, 2, 0.568) 5px;
+    padding: 8px;
+    font-weight:5px;
+    text-align: center;
+    margin-top: 30%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 20px 0px 30px black, -0px  0px 30px black;
+    border-radius: 5%;
+
+
+      }
+ 
+.title{
+     background-color:rgba(255, 255, 255, 0.877);
+    border: solid rgba(7, 4, 2, 0.658) 5px;
+    text-align: center;
+    font-size: 50px;
+    font-family:inherit solid;
+    box-shadow: 20px 0px 30px black, -20px  0px 30px black;
+    color:rgb(82, 48, 48);
+    border-radius: 20px;
+
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x:scroll;
+    padding: 3rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item1 {
+    flex: 2 0 250px;
+    margin-left: 2rem;
+    scroll-snap-align:start;
+
+}
+/* 
+p{
+    padding-left: 5px;
+   } */
+
