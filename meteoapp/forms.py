@@ -2,7 +2,6 @@
 from unicodedata import name
 from django.forms import ModelForm , TextInput
 
-from . import models
 from .models import City
 
 

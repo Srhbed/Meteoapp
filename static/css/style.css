@@ -1,8 +1,9 @@
 body{
  background-image: url(../images/pexels-pixabay-235721.jpg);
+ /* background-image: url(../images/pexels-sindre-strøm-1175135.jpg); */
+ }
  
 
- }
  footer{
     background-color: black;
 color: white; 
@@ -163,6 +164,17 @@ color:rgb(90, 48, 48);
     margin-left: 2rem;
     scroll-snap-align:start;
 
+}
+#login
+{
+   margin-top: 5%;
+   margin-right: 10%;
+   margin-left: 10%;
+    background-color:rgba(228, 158, 72, 0.952);
+        border: solid rgba(7, 4, 2, 0.568) 5px;
+
+  
+   
 }
 /* 
 p{
