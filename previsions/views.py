@@ -1,7 +1,6 @@
 from datetime import datetime
 from django.shortcuts import render
 import requests
-from django.contrib.auth.decorators import login_required
 
 from meteoapp.views import SECRET_KEY
 
@@ -11,7 +10,6 @@ from meteoapp.views import SECRET_KEY
 
 
 
-@login_required
 def previsions(request):
     
     

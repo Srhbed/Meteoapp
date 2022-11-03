@@ -1,11 +1,17 @@
 body{
  background-image: url(../images/pexels-pixabay-235721.jpg);
  /* background-image: url(../images/pexels-sindre-strøm-1175135.jpg); */
+ min-height: 100vh;
+display: flex;
+    flex-direction: column;
  }
  
+main{
+    flex-grow: 1;
+}
 
  footer{
-    background-color: black;
+ background-color: black;
 color: white; 
 text-align: center;}
 .title1{
@@ -176,8 +182,5 @@ color:rgb(90, 48, 48);
   
    
 }
-/* 
-p{
-    padding-left: 5px;
-   } */
+
 

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block banner %}
+<br><br><br>
+<section class="section">
+    <div class="container">
+        <div class="rows">
+            <div class="column is-offset-4 is-4">
+              
+                <div class="box1" ><a href="./previsions/"></a>
+                    <article class="media">
+                        <div class="media-left">
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                              
+                                <p>
+                                <h1  id='city' >{{name.0.0}}</h1>
+                                <img id= 'icon' src="http://openweathermap.org/img/w/{{icon}}.png" width='150px'>
+                                <h1 id="temps">{{temp}}°C</h1>
+                                <h1 id="desc">{{description}}</h1>
+                                <h1 id="jour">{{day}}</h1> 
+                                
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+ 
+    </section> 
+{% endblock banner %}
+

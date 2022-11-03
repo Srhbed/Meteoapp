@@ -9,6 +9,10 @@ import os
 # from meteoapp.forms import Cityform 
 # from django.forms import ModelForm , TextInput
 from . import models
+from .models import City
+from django.db import connection
+from django.contrib.auth.decorators import login_required
+
  
 load_dotenv()
 
@@ -30,6 +34,8 @@ def index(request):
     
 
     city_weather = requests.get(url=URL ,params=PARAMS)
+    
+  
   
 
     res=city_weather.json()
@@ -43,8 +49,57 @@ def index(request):
    
     return render(request, 'home.html',{'description': description ,'icon':icon ,'temp':temp ,'day':day, 'city':city})
 
-   
-    
-    
-   
 
+
+@login_required
+
+def api_favoris(request):
+  
+    sql="SELECT name FROM meteoapp_city GROUP BY name ORDER BY COUNT(*) DESC LIMIT 1 OFFSET 1"
+    
+
+       
+    with connection.cursor() as cursor:
+        cursor.execute(sql)
+        villes=cursor.fetchall()   
+        print(villes)     
+        print(connection.queries)
+    liste = []
+    
+
+       
+
+    
+    
+    for ville in villes:
+        ville = ville[0]
+        
+        request.session['city']=ville
+        obj=models.City()
+        obj.name=ville
+        appid : SECRET_KEY 
+        
+        URL="https://api.openweathermap.org/data/2.5/weather"
+        PARAMS= {'q':ville,'appid':SECRET_KEY ,'units':'metric'}
+        
+
+        city_weather = requests.get(url=URL ,params=PARAMS)
+        
+    
+    
+
+        res=city_weather.json()
+        liste.append(res)
+        
+         
+        description=liste[0]['weather'][0]['description']
+        icon=liste[0]['weather'][0]['icon'] 
+        temp=liste[0]['main']['temp'] 
+        day = datetime.today()
+    
+    
+        print(liste)    
+        return render(request, 'favori.html',{'description':description,'icon':icon,'temp':temp, 'day':day,'name':villes})
+
+
+        
