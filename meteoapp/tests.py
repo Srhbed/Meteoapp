@@ -11,4 +11,4 @@ class CityTestCase(TestCase):
     def test_for_test_City_name_length(self):
      
         lille = City.objects.get(name="lille")
-        self.assertEqual(lille.test_for_test_City_name_length(),100)
+        self.assertIsInstance(lille.name,str)

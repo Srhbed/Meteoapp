@@ -121,8 +121,15 @@ color:rgb(90, 48, 48);
 }
 #aboute{
  color:black;
- background-color: rgba(255, 154, 108, 0.76);
+ font-size: 20px;
+ font-family:Arial, Helvetica, sans-serif;
+
  margin-top: 5%;
+ margin-right: 10%;
+ margin-left: 10%;
+  background-color:rgba(228, 158, 72, 0.952);
+     border: solid rgba(7, 4, 2, 0.568) 5px;
+
  
     
 }
@@ -183,4 +190,16 @@ color:rgb(90, 48, 48);
    
 }
 
-
+.reset{
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+     background-color:rgba(228, 158, 72, 0.952);
+        border: solid rgba(7, 4, 2, 0.568) 5px;
+ 
+}
+#mdp{
+   color: black;
+   margin-left: 5%;
+   margin-bottom: 1%;
+}

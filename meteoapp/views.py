@@ -6,8 +6,7 @@ import requests
 
 from dotenv import load_dotenv
 import os
-# from meteoapp.forms import Cityform 
-# from django.forms import ModelForm , TextInput
+
 from . import models
 from .models import City
 from django.db import connection
@@ -24,6 +23,7 @@ def index(request):
         city='Amsterdam'
     
     request.session['city']=city
+    
     obj=models.City()
     obj.name=city
     obj.save()
@@ -65,12 +65,7 @@ def api_favoris(request):
         print(villes)     
         print(connection.queries)
     liste = []
-    
-
-       
-
-    
-    
+  
     for ville in villes:
         ville = ville[0]
         
